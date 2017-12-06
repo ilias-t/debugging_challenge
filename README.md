@@ -1,8 +1,19 @@
-# Redux TodoMVC Example
+# Debugging Challenge
 
-This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app), which provides a simple way to start React projects with no build configuration needed.
+Fix all the console errors & restore the application back to its original state. **Features that may be affected:**
 
-Projects built with Create-React-App include support for ES6 syntax, as well as several unofficial / not-yet-final forms of Javascript syntax such as Class Properties and JSX.  See the list of [language features and polyfills supported by Create-React-App](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#supported-language-features-and-polyfills) for more information.
+*User can...*
+
+* See the application
+* See one item to start with
+* Maintain a list of todo items
+* Add a todo item
+* Complete a todo item
+* Delete a todo item
+* Clear the list of completed items
+* See a count of the todos displayed as zero items, 1 item, 2+ items.
+
+Additionally, at the end of the exercise, all tests should pass.
 
 ## Available Scripts
 

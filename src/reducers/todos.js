@@ -10,9 +10,8 @@ const initialState = [
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
-    case ADD_TODO:
+    case ADDTODO:
       return [
-        ...state,
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
           completed: false,
@@ -20,9 +19,9 @@ export default function todos(state = initialState, action) {
         }
       ]
 
-    case DELETE_TODO:
+    case 'DELETE':
       return state.filter(todo =>
-        todo.id !== action.id
+        todo.id === action.id
       )
 
     case EDIT_TODO:
@@ -35,7 +34,7 @@ export default function todos(state = initialState, action) {
     case COMPLETE_TODO:
       return state.map(todo =>
         todo.id === action.id ?
-          { ...todo, completed: !todo.completed } :
+          { ...todo, completed: !!todo.completed } :
           todo
       )
 
@@ -47,7 +46,7 @@ export default function todos(state = initialState, action) {
       }))
 
     case CLEAR_COMPLETED:
-      return state.filter(todo => todo.completed === false)
+      return state.filter(todo => todo.completed)
 
     default:
       return state
